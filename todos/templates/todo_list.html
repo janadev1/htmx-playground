@@ -1,7 +1,7 @@
-{% if todos %}
 <ul id="todos-list" class="fade">
+  {% if todos %}
   {% for todo in todos %}
   {% include "todo_item.html" %}
   {% endfor %}
+  {% endif %}
 </ul>
-{% endif %}
