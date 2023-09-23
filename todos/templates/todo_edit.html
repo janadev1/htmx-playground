@@ -1,0 +1,1 @@
+<input type="text" name="todo" hx-put="{% url 'todo-edit' todo.id %}" hx-swap="outerHTML" value="{{ todo.text }}">

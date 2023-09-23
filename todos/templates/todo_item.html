@@ -1,0 +1,5 @@
+<li id="todo-item-{{todo.id}}" class="fade-in fade-out" classes="add show:0s">
+        {{ todo.text }} <span hx-get="{% url 'todo-edit' todo.id %}" hx-swap="outerHTML"
+                hx-target="#todo-item-{{todo.id}}">Edit</span> <span hx-delete="{% url 'todo-delete' todo.id %}"
+                hx-target="#todo-item-{{todo.id}}" hx-swap="outerHTML swap:0.5s">X</span>
+</li>

@@ -1,0 +1,2 @@
+<input class="form-control" type="search" name="search" hx-get="{% url 'todos' %}"
+  hx-trigger="keyup changed delay:10ms, search" hx-target="#todos-list" hx-swap="outerHTML" placeholder="Search...">
