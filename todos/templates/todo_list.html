@@ -1,7 +1,7 @@
-<div id="todos-list" class="todos-list fade">
+<ul id="todos-list" class="fade w-full flex flex-col justify-start items-center space-y-3">
   {% if todos %}
-  {% for todo in todos %}
-  {% include "todo_item.html" %}
-  {% endfor %}
+    {% for todo in todos %}
+      {% include "todo_item.html" %}
+    {% endfor %}
   {% endif %}
-</div>
+</ul>

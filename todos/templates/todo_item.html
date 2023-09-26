@@ -1,6 +1,15 @@
-<div id="todo-item-{{todo.id}}" class="fade-in fade-out todo-item" classes="add show:0s">
-        {{ todo.text }} <span><span class="fa-regular fa-pen-to-square" hx-get="{% url 'todo-edit' todo.id %}"
-                        hx-swap="outerHTML" hx-target="#todo-item-{{todo.id}}"></span> <span class="fa-solid fa-trash"
-                        hx-delete="{% url 'todo-delete' todo.id %}" hx-target="#todo-item-{{todo.id}}"
-                        hx-swap="outerHTML swap:1s"></span></span>
-</div>
+<li id="todo-item-{{todo.id}}" class="fade-in fade-out todo-item flex w-full gap-2 py-2 px-3 border border-slate-400 items-center rounded" classes="add show:0s">
+  <p class="flex-1">{{ todo.text }}</p>
+  <span
+    class="fa-regular fa-pen-to-square"
+    hx-get="{% url 'todo-edit' todo.id %}"
+    hx-swap="outerHTML"
+    hx-target="#todo-item-{{todo.id}}">
+  </span> 
+  <span
+    class="fa-solid fa-trash"
+    hx-delete="{% url 'todo-delete' todo.id %}"
+    hx-target="#todo-item-{{todo.id}}"
+    hx-swap="outerHTML swap:1s">
+  </span>
+</li>
